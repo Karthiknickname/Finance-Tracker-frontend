@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
   Navigate,
@@ -17,7 +17,7 @@ import { Toaster } from "react-hot-toast"
 const App = () => {
   return (
     <UserProvider>
-      <Router basename="/react-Finance-Tracker-frontend">
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />} />
           <Route path="/login" element={<Login />} />
@@ -26,7 +26,7 @@ const App = () => {
           <Route path="/income" element={<Income />} />
           <Route path="/expense" element={<Expense />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
 
       <Toaster
         toastOptions={{
